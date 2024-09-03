@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Adm\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Site\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [IndexController::class, 'index']);
+
 
 Route::get('/adm', [HomeController::class, 'home'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('/remove-image', [HomeController::class, 'removeImage'])->name('remove_image');
@@ -37,10 +38,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/about', function () {
     return view('about');
