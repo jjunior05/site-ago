@@ -8,17 +8,30 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+	const PATH_IMG = [
+		'main_slide' => 'img/main_slide/',
+		'services' => 'img/services/',
+	];
+
     public function index()
 	{
-		$imagePath = public_path('img/main_slide');
+		$imagePathMainsSlide = public_path(SELF::PATH_IMG['main_slide']);
+		$imagesServices = public_path(SELF::PATH_IMG['services']);
+		
+		$imagesMainSlide = File::files($imagePathMainsSlide);
+		$imagesService = File::files($imagesServices);
 
-		$images = File::files($imagePath);
+		$imageUrlsMainSlide = [];
+		$imageUrlsServices = [];
 
-		$imagesSrc= [];
-		foreach ($images as $image) {
-			$imagesSrc[] = asset('img/main_slide/' . $image->getFilename());
+		foreach ($imagesMainSlide as $image) {
+			$imageUrlsMainSlide[] = asset(SELF::PATH_IMG['main_slide'] . $image->getFilename());
+		}
+
+		foreach ($imagesService as $imageService) {
+			$imageUrlsServices[] = asset(SELF::PATH_IMG['services'] . $imageService->getFilename());
 		}
 		
-		return view('welcome', compact('imagesSrc'));
+		return view('welcome', compact('imageUrlsMainSlide', 'imageUrlsServices'));
 	}
 }

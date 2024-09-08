@@ -1,50 +1,45 @@
 <?php
 
-use App\Http\Controllers\Adm\HomeController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Site\IndexController;
+use App\Http\Controllers\Adm\CurriculoController as AdmCurriculoController;
+use App\Http\Controllers\Site\CurriculoController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Adm\HomeController;
+use App\Http\Controllers\Site\IndexController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 Route::get('/', [IndexController::class, 'index']);
-
-
-Route::get('/adm', [HomeController::class, 'home'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/remove-image', [HomeController::class, 'removeImage'])->name('remove_image');
-Route::post('/add-image', [HomeController::class, 'addImage'])->name('add_image');
-Route::get('/adm/contato', function () {
-    return view('adm.contato');
-})->middleware(['auth', 'verified'])->name('contato');
-Route::get('/adm/curriculo', function () {
-    return view('adm.curriculo');
-})->middleware(['auth', 'verified'])->name('curriculo');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';
+Route::post('/site/add-curriculo', [CurriculoController::class, 'addCurriculo'])->name('add_curriculo');
+Route::get('/adm/curriculo', [CurriculoController::class, 'curriculoPage'])->name('curriculo');
 
 Route::get('/about', function () {
-    return view('about');
+	return view('about');
 });
 Route::get('/contact', function () {
-    return view('contact');
+	return view('contact');
+});
+Route::get('/curriculo', function () {
+	return view('curriculo');
 });
 Route::get('/service', function () {
-    return view('service');
+	return view('service');
 });
+
+Route::middleware(['auth', 'verified'])->group(function (){
+	Route::get('/adm', [HomeController::class, 'home'])->name('dashboard');
+	Route::post('/remove-image', [HomeController::class, 'removeImage'])->name('remove_image');
+	Route::post('/add-image', [HomeController::class, 'addImage'])->name('add_image');
+	Route::get('/adm/contato', function () {
+		return view('adm.contato');
+
+	})->name('contato');
+
+
+	Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+	Route::post('register', [RegisteredUserController::class, 'store']);
+	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__ . '/auth.php';

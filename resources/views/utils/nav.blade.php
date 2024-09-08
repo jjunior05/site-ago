@@ -14,7 +14,7 @@
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Oportunidades</a>
 					<div class="dropdown-menu fade-up m-0">
-						<a href="booking.html" class="dropdown-item">Trabalhe Conosco</a>
+						<a href="/curriculo" class="dropdown-item">Trabalhe Conosco</a>
 					</div>
 				</div>
 				<a href="/contact" class="{{ Request::is('contact') ? 'nav-item nav-link active' : 'nav-item nav-link' }}">Contato</a>
