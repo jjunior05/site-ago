@@ -68,20 +68,28 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-4">Oportunidades Disponíveis</h1>
-                    <iframe class="position-relative w-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="row">
                         <h6 class="text-primary text-uppercase">Envie o seu currículo</h6>
                     </div>
+
                     <div class="bg-light p-5 h-100 d-flex align-items-center">
                         <form action="{{ route('add_curriculo') }}" class="mt-6 space-y-6" method="POST"
                             enctype="multipart/form-data">
                             @csrf
+							<div class="row g-3">
+								<div class="rol-12 mb-20">
+									<div class="form-floating">
+										<input type="text" class="form-control" name="nome" required ="nome" placeholder="Nome">
+										<label for="subject">Nome</label>
+									</div>
+								</div>
+								<div class="rol-12 mb-20">
+									<div class="form-floating">
+										<input type="text" class="form-control" name="atuacao" required id="atuacao" placeholder="Atuação">
+										<label for="subject">Área de atuação</label>
+									</div>
+								</div>
+							</div>
                             <div class="row g-6">
                                 <div class="col-md-12">
                                     <div class="form-floating">
