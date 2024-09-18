@@ -83,34 +83,49 @@
                 </div>
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light p-5 h-100 d-flex align-items-center">
-                        <form>
+                        <form action="{{ route('send_contact') }}" class="mt-6 space-y-6" method="POST">
+							@csrf
                             <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="nome" required placeholder="Your Name">
+                                        <label for="name">Seu Nome</label>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
+                                        <label for="email">Seu E-mail</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="text" class="form-control" id="phone" name="phone" required placeholder="Your Email">
+                                        <label for="email">Seu celular</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject">
+                                        <label for="subject">Assunto</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
+                                        <textarea class="form-control" required placeholder="Leave a message here" name="message" id="message" style="height: 150px"></textarea>
+                                        <label for="message">Messagem</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensagem</button>
+                                </div>
+								<div class="col-12 mt-5">
+									@if (session('success_contato'))
+                                        <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                        <div class="alert alert-success" role="alert" style="color: green;">
+                                            {{ session('success_contato') }}
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </form>

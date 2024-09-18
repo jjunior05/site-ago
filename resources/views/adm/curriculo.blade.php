@@ -15,8 +15,9 @@
                                 <th scope="col"></th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Atuação</th>
-                                <th scope="col">Currículo</th>
+                                <th scope="col">Arquivo</th>
                                 <th scope="col">Data Envio</th>
+                                <th scope="col">Baixar</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -7,9 +7,11 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Adm\HomeController;
 use App\Http\Controllers\Site\IndexController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Site\ContatoController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::post('/site/add-curriculo', [CurriculoController::class, 'addCurriculo'])->name('add_curriculo');
+Route::post('/site/send-contact', [ContatoController::class, 'addContact'])->name('send_contact');
 
 Route::get('/about', function () {
 	return view('about');
@@ -35,11 +37,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 	Route::get('/adm/curriculo', [AdmCurriculoController::class, 'curriculoPage'])->name('curriculo');
 	Route::get('/curriculo/download/{file}', [AdmCurriculoController::class, 'downloadCurriculo'])->name('curriculo.download');
 
-	Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
-	Route::post('register', [RegisteredUserController::class, 'store']);
 	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+	
+	Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+	Route::post('register', [RegisteredUserController::class, 'store']);
 });
 
 require __DIR__ . '/auth.php';
