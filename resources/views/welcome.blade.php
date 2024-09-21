@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('img/icon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,27 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
+
+<style>
+	/* Alinha a logo no topo */
+.logo {
+    margin-top: 0; /* Ajusta o espaçamento superior */
+    max-width: 100%; /* Garante que a logo ocupe 100% da largura disponível */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+/* Garantir responsividade */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 80%; /* Ajuste conforme necessário para telas menores */
+        margin: 0 auto; /* Centraliza a logo no modo mobile */
+    }
+
+    .top-bar {
+        text-align: center; /* Centraliza o texto e ícones no mobile */
+    }
+}
+</style>
 
 <body>
     <!-- Spinner Start -->
