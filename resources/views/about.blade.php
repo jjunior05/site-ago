@@ -109,28 +109,48 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">About Us</h6>
-                    <h1 class="mb-4">We Are Trusted Plumbing Company Since 1990</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Residential & commercial plumbing</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quality services at affordable prices</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Immediate 24/ 7 emergency services</p>
-                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
+                    <h6 class="text-secondary text-uppercase">Sobre a AGO Terceirazação</h6>
+                    {{-- <h1 class="mb-4">We Are Trusted Plumbing Company Since 1990</h1> --}}
+                    <p class="mb-4">AGO Terceirização é uma empresa especializada em prestação de serviços de limpeza
+						e conservação, portaria, serviços administrativos, facilities e na seleção e
+						recrutamento para terceirização de mão-de-obra, consciente de sua reponsabilidade
+						social e mercadológica na gestão de pessoas e de serviços profissionais.
+						Desde 2019 atuando como prestadora de serviços na área de limpeza e conservação,
+						portaria, segurança patrimonial, serviços administrativos e facilities, a se encontra
+						consolidada no mercado, buscando sempre o aperfeiçoamento de suas atividades e
+						o constante crescimento.
+						A empresa atende clientes da administração pública (federal, estadual e municipal) e
+						da iniciativa privada e está presente em todo o território nacional com profissionais
+						qualificados. </p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Missão</p>
+					<p class="mb-4">Satisfazer plenamente os clientes internos e externos, por meio de atendimento ágil
+						e serviços de qualidade, buscando profissionais motivados e comprometidos. </p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Valores</p>
+					<p class="mb-4">
+						– Comprometimento com os resultados <br />
+						– Aprendizagem <br />
+						– Disciplina <br />
+						– Valorização do ser humano <br />
+						– Eficiência <br />
+						– Presteza </p>
+                    {{-- <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quality services at affordable prices</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Immediate 24/ 7 emergency services</p> 
+                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
                         </div>
-                        <div class="ms-3">
+                         <div class="ms-3">
                             <p class="fs-5 fw-medium mb-2 text-white">Emergency 24/7</p>
                             <h3 class="m-0 text-secondary">+012 345 6789</h3>
-                        </div>
-                    </div>
+                        </div> 
+                    </div> --}}
                 </div>
-                <div class="col-lg-6 pt-4" style="min-height: 500px;">
+                {{-- <div class="col-lg-6 pt-4" style="min-height: 500px;">
                     <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
                         <img class="position-absolute img-fluid w-100 h-100" src="img/about-1.jpg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
                         <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="img/about-2.jpg" style="object-fit: cover;" alt="">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -138,7 +158,7 @@
 
 
     <!-- Fact Start -->
-    <div class="container-fluid fact bg-dark my-5 py-5">
+    {{-- <div class="container-fluid fact bg-dark my-5 py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -163,12 +183,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Fact End -->
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    {{-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Our Technicians</h6>
@@ -249,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Team End -->
         
 

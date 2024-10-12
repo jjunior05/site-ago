@@ -8,8 +8,8 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<div class=" navbar-nav me-auto">
-				<a href="/" class="{{ Request::is('/') ? 'nav-item nav-link active' : 'nav-item nav-link' }}"><img class="img-fluid" src="img/logo_img.png" alt=""></a>
-				<a href="/" class="{{ Request::is('/') ? 'nav-item nav-link active' : 'nav-item nav-link' }}"><img class="img-fluid" src="img/logo.png" alt=""></a>
+				{{-- <a href="/" class="{{ Request::is('/') ? 'nav-item nav-link active' : 'nav-item nav-link' }}"><img class="img-fluid" src="img/logo_img.png" alt=""></a> --}}
+				<a href="/" class="{{ Request::is('/') ? 'nav-item nav-link active' : 'nav-item nav-link' }}"><img class="img-fluid" src="img/logo_vazado.png" alt=""></a>
 				<a href="/" class="{{ Request::is('/') ? 'nav-item nav-link active' : 'nav-item nav-link' }}">Início</a>
 				<a href="/about" class="{{ Request::is('about') ? 'nav-item nav-link active' : 'nav-item nav-link' }}">Sobre</a>
 				<a href="/service" class="{{ Request::is('service') ? 'nav-item nav-link active' : 'nav-item nav-link' }}">Serviços</a>
@@ -26,8 +26,8 @@
 					<i class="fa fa-phone-alt text-primary"></i>
 				</div>
 				<div class="ms-3">
-					<p class="mb-1 text-white">Telefone 24/7</p>
-					<h5 class="m-0 text-secondary">27 99814-7677</h5>
+					<p class="mb-1 text-white">Telefone</p>
+					<h5 class="m-0 text-secondary">27 3236-9919</h5>
 				</div>
 			</div>
 		</div>

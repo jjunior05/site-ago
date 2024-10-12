@@ -8,11 +8,11 @@
 		<div class="col-lg-9 col-md-12 text-end mt-20">
 			<div class="h-100 d-inline-flex align-items-center me-4">
 				<i class="fa fa-map-marker-alt text-primary me-2"></i>
-				<p class="m-0">Cariacica, Espírito Santo, BRA</p>
+				<p class="m-0">Praça Pres. Getúlio Vargas, 35 - Vitória, Centro - ES, 29010-350</p>
 			</div>
 			<div class="h-100 d-inline-flex align-items-center me-4">
 				<i class="far fa-envelope-open text-primary me-2"></i>
-				<p class="m-0">ago@teste.br</p>
+				<p class="m-0">contato@agoterceirizacao.com.br</p>
 			</div>
 			<div class="h-100 d-inline-flex align-items-center">
 				<a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
